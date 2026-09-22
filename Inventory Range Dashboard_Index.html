@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TechMart - Inventory Analytics</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <h1>TechMart</h1>
+
+            <p>
+                Inventory Analytics Dashboard
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+
+            <div class="dashboard-heading">
+
+                <h2>
+                    Inventory Range Dashboard
+                </h2>
+
+                <p>
+                    Analyze inventory value within a price range
+                </p>
+
+            </div>
+
+
+            <!-- PRICE INPUT -->
+
+            <div class="filter-card">
+
+                <div class="input-group">
+
+                    <label for="minPrice">
+                        Minimum Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="minPrice"
+                        placeholder="₹5,000"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="maxPrice">
+                        Maximum Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="maxPrice"
+                        placeholder="₹20,000"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <button
+                    id="searchBtn"
+                    class="search-btn"
+                >
+                    Analyze Inventory
+                </button>
+
+            </div>
+
+
+            <!-- SLIDER -->
+
+            <div class="slider-card">
+
+                <div class="slider-header">
+
+                    <h3>
+                        Quick Price Range
+                    </h3>
+
+                    <span id="sliderValue">
+                        ₹0 - ₹150,000
+                    </span>
+
+                </div>
+
+
+                <div class="slider-container">
+
+                    <div class="slider-values">
+
+                        <span id="minSliderValue">
+                            ₹0
+                        </span>
+
+                        <span id="maxSliderValue">
+                            ₹150,000
+                        </span>
+
+                    </div>
+
+
+                    <input
+                        type="range"
+                        id="minSlider"
+                        min="0"
+                        max="150000"
+                        value="0"
+                        step="100"
+                    >
+
+
+                    <input
+                        type="range"
+                        id="maxSlider"
+                        min="0"
+                        max="150000"
+                        value="150000"
+                        step="100"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="summary-grid">
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Matching Products
+                        </p>
+
+                        <h2 id="productCount">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Inventory Value
+                        </p>
+
+                        <h2 id="inventoryValue">
+                            ₹0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Units in Stock
+                        </p>
+
+                        <h2 id="totalUnits">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- PRODUCT RESULTS -->
+
+        <section class="results-section">
+
+            <div class="results-header">
+
+                <div>
+
+                    <h2>
+                        Matching Products
+                    </h2>
+
+                    <p id="rangeText">
+                        Select a price range
+                    </p>
+
+                </div>
+
+                <span id="resultCount">
+                    0 products
+                </span>
+
+            </div>
+
+
+            <div
+                id="productList"
+                class="product-grid"
+            >
+
+                <div class="empty-state">
+
+                    <h3>
+                        No Range Selected
+                    </h3>
+
+                    <p>
+                        Enter a price range to analyze inventory.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- DATA FIRST -->
+
+    <script src="/eCart_Challenge_1/data.js"></script>
+
+    <!-- APPLICATION SECOND -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
