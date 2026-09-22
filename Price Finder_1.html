@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMart - Product Explorer</title>
+
+    <link rel="stylesheet" href="Price Finder_1.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>TechMart</h1>
+            <p>Product Explorer</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Price Finder -->
+        <section class="price-section">
+
+            <div class="section-heading">
+                <h2>Smart Price Finder</h2>
+                <p>Find products closest to your target price</p>
+            </div>
+
+
+            <!-- Target Price -->
+            <div class="search-box">
+
+                <label for="targetPrice">
+                    Find products around
+                </label>
+
+                <div class="input-row">
+
+                    <input
+                        type="number"
+                        id="targetPrice"
+                        placeholder="Example: 70000"
+                        min="0"
+                    >
+
+                    <button id="searchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Range Search -->
+            <div class="range-box">
+
+                <h3>Find Products in Price Range</h3>
+
+                <div class="range-inputs">
+
+                    <div>
+                        <label for="minPrice">Minimum Price</label>
+
+                        <input
+                            type="number"
+                            id="minPrice"
+                            placeholder="₹50,000"
+                            min="0"
+                        >
+                    </div>
+
+
+                    <div>
+                        <label for="maxPrice">Maximum Price</label>
+
+                        <input
+                            type="number"
+                            id="maxPrice"
+                            placeholder="₹80,000"
+                            min="0"
+                        >
+                    </div>
+
+                </div>
+
+                <button id="rangeBtn" class="range-btn">
+                    Find Products in This Range
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+        <section class="results-section">
+
+            <div class="results-header">
+
+                <h2 id="resultTitle">
+                    Products
+                </h2>
+
+                <span id="resultCount"></span>
+
+            </div>
+
+
+            <div
+                id="productContainer"
+                class="product-grid"
+            >
+                <!-- Products will be inserted here -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-btn">
+                ×
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT:
+         data.js must come before app.js
+    -->
+
+    <script src="data.js"></script>
+    <script src="Price_Finder_1.js"></script>
+
+</body>
+</html>
