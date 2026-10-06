@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMart - Popular Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛒 TechMart</h1>
+        <p>Product Explorer</p>
+    </header>
+
+    <main>
+
+        <section class="popular-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>🔥 Popular Products</h2>
+                    <p>Top products based on rating × reviews</p>
+                </div>
+
+                <div class="top-k-box">
+
+                    <label for="topK">
+                        Show Top:
+                    </label>
+
+                    <select id="topK">
+                        <option value="3">3</option>
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div id="productContainer" class="product-grid">
+                <!-- Products will appear here -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/e_Cart Challenge/data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
